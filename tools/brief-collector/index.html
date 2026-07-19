@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>攝影師需求收集包 — 一鍵產生 ZIP</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">本機工具 · 不必上線</p>
+      <h1>攝影師需求收集包</h1>
+      <p class="lead">
+        把品牌名稱、關於我、社群與照片貼進來，按「產生 ZIP」。
+        把下載的壓縮檔丟給 AI，就能開始做網站。
+      </p>
+      <ul class="rules">
+        <li>單張照片建議不超過 3MB；超過會自動縮小壓縮</li>
+        <li>最長邊會壓到約 2000px 以內</li>
+        <li>此頁可直接用瀏覽器開啟，資料不會上傳到任何伺服器</li>
+      </ul>
+    </header>
+
+    <form id="brief-form">
+      <section class="card">
+        <h2>1. 品牌與主題</h2>
+        <div class="grid-2">
+          <label>品牌／網站名稱（中文）*
+            <input name="nameZh" required placeholder="例：Light & Story Photography" />
+          </label>
+          <label>英文名或副標
+            <input name="nameEn" placeholder="例：Light & Story Photography" />
+          </label>
+          <label>攝影師對外名字*
+            <input name="photographer" required placeholder="例：Jim" />
+          </label>
+          <label>主標語*
+            <input name="tagline" required placeholder="例：光影流轉之間，留下屬於你的回憶。" />
+          </label>
+        </div>
+        <label>網站語氣
+          <select name="tone">
+            <option>溫暖故事感</option>
+            <option>極簡時尚</option>
+            <option>日系清新</option>
+            <option>復古電影感</option>
+            <option>其他</option>
+          </select>
+        </label>
+        <label>語氣補充（選填）
+          <input name="toneNote" placeholder="若選其他，或想補充一句" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>2. 作品分類（自己定義）</h2>
+        <p class="hint">
+          不一定要用別人的分類。自己新增風格名稱、一句描述，並為每個分類上傳封面圖。
+          建議 2–6 個分類。
+        </p>
+        <div id="categories" class="categories"></div>
+        <button type="button" class="btn-secondary" id="add-category">＋ 新增分類</button>
+      </section>
+
+      <section class="card">
+        <h2>3. 關於我</h2>
+        <div class="grid-2">
+          <label>身份
+            <select name="career">
+              <option>接案攝影師</option>
+              <option>全職攝影師</option>
+              <option>興趣／兼職</option>
+            </select>
+          </label>
+          <label>拍攝年資（約略）
+            <input name="years" placeholder="例：5 年" />
+          </label>
+          <label>主要服務地區
+            <input name="area" placeholder="例：台中、可外縣市" />
+          </label>
+          <label>最想讓客人記住的一句話
+            <input name="oneLiner" placeholder="例：不需要完美姿勢，只要願意被好好記錄的自己。" />
+          </label>
+        </div>
+        <label>關於我完整文案（可空白，空白會用上面欄位自動組）
+          <textarea name="aboutLong" rows="5" placeholder="嗨，我是……"></textarea>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>4. 社群與聯絡</h2>
+        <div class="grid-2">
+          <label>Instagram（可多行，每行一個）
+            <textarea name="instagram" rows="3" placeholder="https://instagram.com/xxx&#10;或帳號 xxx"></textarea>
+          </label>
+          <label>Facebook（可多行）
+            <textarea name="facebook" rows="3" placeholder="https://facebook.com/..."></textarea>
+          </label>
+          <label>Threads（可多行）
+            <textarea name="threads" rows="2" placeholder="@jimyi_rk"></textarea>
+          </label>
+          <label>X / Line / Email（選填）
+            <textarea name="otherContact" rows="2" placeholder="Line: xxx / hello@email.com"></textarea>
+          </label>
+        </div>
+        <div class="grid-2">
+          <label>Footer 要放幾個帳號
+            <select name="footerMode">
+              <option value="main">只要主帳</option>
+              <option value="all" selected>能放的都放</option>
+            </select>
+          </label>
+          <label>客人詢價方式
+            <select name="contactPrefer">
+              <option>IG 私訊</option>
+              <option>Line</option>
+              <option>Email</option>
+              <option>表單</option>
+            </select>
+          </label>
+          <label>第一版是否放價格
+            <select name="pricing">
+              <option value="no">不放，私訊詢價</option>
+              <option value="range">放大概區間</option>
+              <option value="full">完整價目</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>5. 其他照片</h2>
+        <p class="hint">分類封面請在上方「作品分類」每一列上傳。這裡只收 Hero、精選、關於我。太大的圖會自動壓縮。</p>
+        <div class="uploads">
+          <label class="upload">Hero 主視覺（1 張，橫式佳）*
+            <input type="file" id="file-hero" accept="image/*" />
+            <span class="file-status" data-for="hero"></span>
+          </label>
+          <label class="upload">精選作品（可多選，建議 6–12 張）*
+            <input type="file" id="file-featured" accept="image/*" multiple />
+            <span class="file-status" data-for="featured"></span>
+          </label>
+          <label class="upload">關於我 — 人像主圖（1 張）*
+            <input type="file" id="file-about-main" accept="image/*" />
+            <span class="file-status" data-for="about-main"></span>
+          </label>
+          <label class="upload">關於我 — 生活小圖（選填）
+            <input type="file" id="file-about-detail" accept="image/*" />
+            <span class="file-status" data-for="about-detail"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>6. 給 AI 的補充</h2>
+        <label>其他想說的（選填）
+          <textarea name="notes" rows="3" placeholder="例：手機版 Footer 要直向、不要放 X……"></textarea>
+        </label>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="btn" id="generate-btn">產生 ZIP 並下載</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <footer class="foot">
+      <p>開啟方式：用瀏覽器打開本資料夾的 <code>index.html</code>（可整包資料夾傳給朋友）。</p>
+      <p>產出內容：<code>BRIEF.md</code> + <code>CHECKLIST.txt</code> + <code>photos/</code></p>
+    </footer>
+  </main>
+
+  <script src="./vendor/jszip.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
