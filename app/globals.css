@@ -1,14 +1,16 @@
 :root {
-  --bg: #f5f2ee;
-  --bg-deep: #d9d4cc;
-  --surface: rgba(255, 255, 255, 0.65);
-  --surface-strong: rgba(246, 244, 239, 0.92);
+  --bg: #ede6db;
+  --bg-deep: #d6ccbd;
+  --surface: rgba(237, 230, 219, 0.66);
+  --surface-strong: rgba(237, 230, 219, 0.9);
   --text: #2c2c2c;
-  --muted: #6d6a66;
-  --line: rgba(44, 44, 44, 0.12);
-  --accent: #8b7355;
-  --accent-deep: #4a463f;
-  --earth-wash: rgba(196, 167, 125, 0.42);
+  --muted: #6f675f;
+  --line: rgba(127, 138, 116, 0.24);
+  --accent: #7f8a74;
+  --accent-warm: #b88b60;
+  --accent-deep: #4f5747;
+  --taupe: #afa091;
+  --earth-wash: rgba(184, 139, 96, 0.3);
 }
 
 * {
@@ -24,8 +26,9 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.2)),
-    radial-gradient(circle at top, rgba(139, 115, 85, 0.1), transparent 36%),
+    linear-gradient(180deg, rgba(237, 230, 219, 0.86), rgba(237, 230, 219, 0.58)),
+    radial-gradient(circle at top left, rgba(184, 139, 96, 0.16), transparent 34%),
+    radial-gradient(circle at top right, rgba(127, 138, 116, 0.14), transparent 32%),
     var(--bg);
 }
 
@@ -70,10 +73,10 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(245, 242, 238, 0.92);
-  border-bottom: 1px solid rgba(44, 44, 44, 0.08);
+  background: rgba(237, 230, 219, 0.88);
+  border-bottom: 1px solid rgba(127, 138, 116, 0.18);
   backdrop-filter: blur(16px);
-  box-shadow: 0 12px 28px rgba(44, 44, 44, 0.04);
+  box-shadow: 0 14px 28px rgba(79, 87, 71, 0.08);
 }
 
 .brand {
@@ -88,12 +91,13 @@ h3 {
   letter-spacing: 0.05em;
   font-family: "Segoe Script", "Brush Script MT", cursive;
   font-style: italic;
+  color: var(--accent-deep);
 }
 
 .brand-sub {
   font-size: 0.7rem;
   letter-spacing: 0.34em;
-  color: var(--muted);
+  color: var(--accent-warm);
 }
 
 .menu-toggle {
@@ -126,7 +130,7 @@ h3 {
 }
 
 .nav a:hover {
-  color: var(--accent);
+  color: var(--accent-deep);
 }
 
 #home,
@@ -155,8 +159,13 @@ h3 {
 }
 
 .button-solid {
-  background: var(--accent-deep);
+  background: var(--accent);
   color: #fff;
+  border-color: var(--accent);
+}
+
+.button-solid:hover {
+  background: var(--accent-deep);
   border-color: var(--accent-deep);
 }
 
@@ -186,7 +195,7 @@ h3 {
 
 .hero-script {
   margin: 0 0 12px;
-  color: var(--muted);
+  color: var(--accent-warm);
   font-size: 1.2rem;
 }
 
@@ -220,7 +229,7 @@ h1 {
   min-height: 620px;
   overflow: hidden;
   border-radius: 2px;
-  background: var(--bg-deep);
+  background: linear-gradient(145deg, var(--bg-deep), var(--taupe));
 }
 
 .hero-tint,
@@ -272,36 +281,36 @@ h1 {
   --image-wash: rgba(196, 167, 125, 0.42);
   overflow: hidden;
   border: 1px solid var(--line);
-  background: var(--surface-strong);
+  background: rgba(237, 230, 219, 0.84);
 }
 
 .category-card--new-chinese {
-  --category-accent: #9a4c44;
+  --category-accent: var(--accent-warm);
   --image-wash: rgba(139, 70, 58, 0.3);
 }
 
 .category-card--wedding {
-  --category-accent: #9b6f78;
+  --category-accent: var(--accent);
   --image-wash: rgba(154, 102, 113, 0.27);
 }
 
 .category-card--portrait {
-  --category-accent: #766052;
+  --category-accent: var(--taupe);
   --image-wash: rgba(110, 88, 73, 0.28);
 }
 
 .category-card--event {
-  --category-accent: #9a774b;
+  --category-accent: var(--accent-warm);
   --image-wash: rgba(153, 111, 59, 0.28);
 }
 
 .category-card--family {
-  --category-accent: #7e8564;
+  --category-accent: var(--accent);
   --image-wash: rgba(108, 119, 76, 0.28);
 }
 
 .category-card--fashion {
-  --category-accent: #856b82;
+  --category-accent: var(--accent-deep);
   --image-wash: rgba(126, 91, 120, 0.28);
 }
 
@@ -393,13 +402,14 @@ h1 {
 .section-link {
   padding: 12px 16px;
   border: 1px solid var(--line);
+  color: var(--accent-deep);
   white-space: nowrap;
 }
 
 .marquee {
   overflow: hidden;
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: rgba(214, 204, 189, 0.38);
   padding: 14px 0;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
@@ -453,7 +463,7 @@ h1 {
   align-items: flex-end;
   padding: 16px;
   color: rgba(255, 255, 255, 0.88);
-  background: linear-gradient(145deg, #5a544c, #a79b8f);
+  background: linear-gradient(145deg, var(--accent-deep), var(--taupe));
   border: 1px solid var(--line);
 }
 
@@ -487,7 +497,9 @@ h1 {
   justify-content: center;
   padding: 28px 26px;
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.2));
+  background:
+    linear-gradient(180deg, rgba(237, 230, 219, 0.72), rgba(214, 204, 189, 0.36)),
+    var(--surface-strong);
 }
 
 .about-copy h2 {
@@ -508,7 +520,7 @@ h1 {
   padding: 28px;
   color: #f8f5f0;
   background:
-    linear-gradient(160deg, rgba(73, 59, 50, 0.4), rgba(73, 59, 50, 0.82)),
+    linear-gradient(160deg, rgba(127, 138, 116, 0.42), rgba(79, 87, 71, 0.88)),
     var(--accent);
 }
 
@@ -538,12 +550,14 @@ h1 {
   grid-template-columns: 0.75fr 1.35fr;
   gap: 24px;
   border: 1px solid var(--line);
-  background: var(--surface-strong);
+  background:
+    linear-gradient(135deg, rgba(214, 204, 189, 0.5), rgba(237, 230, 219, 0.8)),
+    var(--surface-strong);
 }
 
 .footer-intro .script {
   font-size: 1.5rem;
-  color: var(--muted);
+  color: var(--accent-warm);
   margin-bottom: 8px;
 }
 
@@ -586,13 +600,13 @@ h1 {
   gap: 14px;
   padding: 12px;
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: rgba(237, 230, 219, 0.72);
   transition: transform 160ms ease, border-color 160ms ease;
 }
 
 .social-card:hover {
   transform: translateY(-1px);
-  border-color: rgba(139, 115, 85, 0.35);
+  border-color: rgba(184, 139, 96, 0.45);
 }
 
 .social-card__label {
@@ -606,7 +620,7 @@ h1 {
   padding: 6px;
   border-radius: 8px;
   border: 1px solid var(--line);
-  background: #f6f4ef;
+  background: #ede6db;
 }
 
 /* ── Contact & Site Footer ── */
@@ -618,7 +632,7 @@ h1 {
 .contact-card {
   padding: 24px;
   border: 1px solid var(--line);
-  background: var(--surface-strong);
+  background: rgba(237, 230, 219, 0.86);
 }
 
 .site-footer {
