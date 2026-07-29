@@ -1,13 +1,25 @@
 "use client";
 
 import { siteConfig } from "@/content/site";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrolled = () => {
+      setScrolled(window.scrollY > 8);
+    };
+
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrolled);
+  }, []);
 
   return (
-    <header className="topbar">
+    <header className={`topbar ${scrolled ? "is-scrolled" : ""}`}>
       <div className="brand">
         <span className="brand-main">{siteConfig.brand.name}</span>
         <span className="brand-sub">{siteConfig.brand.tagline}</span>
