@@ -1,16 +1,16 @@
 :root {
-  --bg: #ede6db;
-  --bg-deep: #d6ccbd;
-  --surface: rgba(237, 230, 219, 0.66);
-  --surface-strong: rgba(237, 230, 219, 0.9);
+  --bg: #f3ede4;
+  --bg-deep: #e4d8ca;
+  --surface: rgba(243, 237, 228, 0.7);
+  --surface-strong: rgba(243, 237, 228, 0.92);
   --text: #2c2c2c;
-  --muted: #6f675f;
-  --line: rgba(127, 138, 116, 0.24);
-  --accent: #7f8a74;
+  --muted: #6e625b;
+  --line: rgba(120, 4, 53, 0.16);
+  --accent: #780435;
   --accent-warm: #b88b60;
-  --accent-deep: #4f5747;
-  --taupe: #afa091;
-  --earth-wash: rgba(184, 139, 96, 0.3);
+  --accent-deep: #4d0222;
+  --taupe: #b6a99d;
+  --earth-wash: rgba(120, 4, 53, 0.18);
 }
 
 * {
@@ -26,9 +26,9 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
   background:
-    linear-gradient(180deg, rgba(237, 230, 219, 0.86), rgba(237, 230, 219, 0.58)),
-    radial-gradient(circle at top left, rgba(184, 139, 96, 0.16), transparent 34%),
-    radial-gradient(circle at top right, rgba(127, 138, 116, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(243, 237, 228, 0.94), rgba(243, 237, 228, 0.7)),
+    radial-gradient(circle at top left, rgba(120, 4, 53, 0.09), transparent 34%),
+    radial-gradient(circle at top right, rgba(184, 139, 96, 0.14), transparent 32%),
     var(--bg);
 }
 
@@ -82,10 +82,19 @@ h3 {
 }
 
 .topbar.is-scrolled {
-  background: #d6ccbd;
-  border-bottom-color: rgba(127, 138, 116, 0.22);
-  box-shadow: 0 14px 28px rgba(79, 87, 71, 0.1);
+  background: #780435;
+  border-bottom-color: rgba(243, 237, 228, 0.22);
+  box-shadow: 0 14px 30px rgba(77, 2, 34, 0.22);
   backdrop-filter: blur(16px);
+}
+
+.topbar.is-scrolled .nav a,
+.topbar.is-scrolled .menu-toggle {
+  color: #f8f2ea;
+}
+
+.topbar.is-scrolled .nav a:hover {
+  color: #e4d8ca;
 }
 
 .brand {
@@ -131,7 +140,7 @@ h3 {
 }
 
 .nav a:hover {
-  color: var(--accent-deep);
+  color: var(--accent);
 }
 
 #home,
@@ -196,7 +205,7 @@ h3 {
 
 .hero-script {
   margin: 0 0 12px;
-  color: var(--accent-warm);
+  color: var(--accent);
   font-size: 1.2rem;
 }
 
@@ -230,7 +239,7 @@ h1 {
   min-height: 620px;
   overflow: hidden;
   border-radius: 2px;
-  background: linear-gradient(145deg, var(--bg-deep), var(--taupe));
+  background: linear-gradient(145deg, #efe4d8, var(--taupe));
 }
 
 .hero-tint,
@@ -286,12 +295,12 @@ h1 {
 }
 
 .category-card--new-chinese {
-  --category-accent: var(--accent-warm);
+  --category-accent: var(--accent);
   --image-wash: rgba(139, 70, 58, 0.3);
 }
 
 .category-card--wedding {
-  --category-accent: var(--accent);
+  --category-accent: var(--accent-warm);
   --image-wash: rgba(154, 102, 113, 0.27);
 }
 
@@ -301,12 +310,12 @@ h1 {
 }
 
 .category-card--event {
-  --category-accent: var(--accent-warm);
+  --category-accent: var(--accent);
   --image-wash: rgba(153, 111, 59, 0.28);
 }
 
 .category-card--family {
-  --category-accent: var(--accent);
+  --category-accent: #8b7355;
   --image-wash: rgba(108, 119, 76, 0.28);
 }
 
@@ -410,7 +419,7 @@ h1 {
 .marquee {
   overflow: hidden;
   border: 1px solid var(--line);
-  background: rgba(214, 204, 189, 0.38);
+  background: rgba(120, 4, 53, 0.05);
   padding: 14px 0;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
@@ -521,7 +530,7 @@ h1 {
   padding: 28px;
   color: #f8f5f0;
   background:
-    linear-gradient(160deg, rgba(127, 138, 116, 0.42), rgba(79, 87, 71, 0.88)),
+    linear-gradient(160deg, rgba(184, 139, 96, 0.26), rgba(77, 2, 34, 0.88)),
     var(--accent);
 }
 
@@ -552,13 +561,13 @@ h1 {
   gap: 24px;
   border: 1px solid var(--line);
   background:
-    linear-gradient(135deg, rgba(214, 204, 189, 0.5), rgba(237, 230, 219, 0.8)),
+    linear-gradient(135deg, rgba(120, 4, 53, 0.05), rgba(243, 237, 228, 0.82)),
     var(--surface-strong);
 }
 
 .footer-intro .script {
   font-size: 1.5rem;
-  color: var(--accent-warm);
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
@@ -607,7 +616,7 @@ h1 {
 
 .social-card:hover {
   transform: translateY(-1px);
-  border-color: rgba(184, 139, 96, 0.45);
+  border-color: rgba(120, 4, 53, 0.32);
 }
 
 .social-card__label {
@@ -621,7 +630,7 @@ h1 {
   padding: 6px;
   border-radius: 8px;
   border: 1px solid var(--line);
-  background: #ede6db;
+  background: #f3ede4;
 }
 
 /* ── Contact & Site Footer ── */
