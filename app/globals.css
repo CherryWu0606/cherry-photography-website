@@ -66,8 +66,14 @@ h3 {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 14px 0 26px;
-  position: relative;
+  padding: 14px 0 18px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(245, 242, 238, 0.92);
+  border-bottom: 1px solid rgba(44, 44, 44, 0.08);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 28px rgba(44, 44, 44, 0.04);
 }
 
 .brand {
@@ -121,6 +127,14 @@ h3 {
 
 .nav a:hover {
   color: var(--accent);
+}
+
+#home,
+#portfolio,
+#about,
+#services,
+#contact {
+  scroll-margin-top: 96px;
 }
 
 /* ── Buttons ── */
