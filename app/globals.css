@@ -90,23 +90,15 @@ h3 {
 
 .brand {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
   z-index: 2;
 }
 
-.brand-main {
-  font-size: 1.8rem;
-  letter-spacing: 0.05em;
-  font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-style: italic;
-  color: var(--accent-deep);
-}
-
-.brand-sub {
-  font-size: 0.7rem;
-  letter-spacing: 0.34em;
-  color: var(--accent-warm);
+.brand-logo {
+  width: clamp(124px, 10vw, 168px);
+  height: auto;
+  display: block;
+  border-radius: 1px;
 }
 
 .menu-toggle {

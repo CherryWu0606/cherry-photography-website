@@ -1,6 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/content/site";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -20,10 +21,16 @@ export default function Header() {
 
   return (
     <header className={`topbar ${scrolled ? "is-scrolled" : ""}`}>
-      <div className="brand">
-        <span className="brand-main">{siteConfig.brand.name}</span>
-        <span className="brand-sub">{siteConfig.brand.tagline}</span>
-      </div>
+      <a className="brand" href="#home" aria-label={`${siteConfig.brand.name} ${siteConfig.brand.tagline}`}>
+        <Image
+          src="/cherry/logo/cherry-woo-logo.png"
+          alt={`${siteConfig.brand.name} ${siteConfig.brand.tagline}`}
+          width={878}
+          height={460}
+          priority
+          className="brand-logo"
+        />
+      </a>
 
       <button
         type="button"
