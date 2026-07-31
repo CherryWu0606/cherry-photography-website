@@ -5,7 +5,9 @@ export const siteConfig = {
   },
   hero: {
     script: "Every fleeting moment, made timeless.",
-    title: "用細膩視角，收藏每一個不經意的瞬間。",
+    title: "用女性的獨特細膩視角與第六感，抓住您每一個不經意，卻真實燦爛的瞬間。",
+    titleEn:
+      "With a woman's uniquely delicate perspective and sixth sense, I capture every unguarded yet truly radiant moment of yours.",
     description:
       "嗨，我是 Cherry。一名在台南接案的攝影師，十年來以溫暖而真實的影像，記錄人與人之間值得珍藏的故事。",
     image: "/cherry/photos/hero/hero-01.jpg",

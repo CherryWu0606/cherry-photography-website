@@ -17,6 +17,7 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-copy">
           <h1>{siteConfig.hero.title}</h1>
+          <p className="hero-title-en">{siteConfig.hero.titleEn}</p>
           <p className="hero-text">{siteConfig.hero.description}</p>
         </div>
 

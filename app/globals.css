@@ -210,9 +210,17 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 4.8vw, 4.4rem);
+  font-size: clamp(2rem, 4.32vw, 3.96rem);
   line-height: 1.18;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
+}
+
+.hero-title-en {
+  max-width: 36rem;
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: clamp(1rem, 1.4vw, 1.28rem);
+  line-height: 1.65;
 }
 
 .hero-text {
