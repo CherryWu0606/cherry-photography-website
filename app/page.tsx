@@ -16,15 +16,8 @@ export default function Home() {
 
       <section className="hero" id="home">
         <div className="hero-copy">
-          <p className="script hero-script">{siteConfig.hero.script}</p>
           <h1>{siteConfig.hero.title}</h1>
           <p className="hero-text">{siteConfig.hero.description}</p>
-          <div className="hero-actions">
-            <a className="button button-solid" href="#portfolio">
-              {siteConfig.hero.cta}
-              <span aria-hidden="true"> →</span>
-            </a>
-          </div>
         </div>
 
         <div className="hero-visual">
