@@ -1,9 +1,9 @@
 :root {
-  --bg: #f3ede4;
-  --bg-deep: #e4d8ca;
-  --surface: rgba(243, 237, 228, 0.7);
-  --surface-strong: rgba(243, 237, 228, 0.92);
-  --text: #2c2c2c;
+  --bg: #f9f5f1;
+  --bg-deep: #ece1d7;
+  --surface: rgba(249, 245, 241, 0.7);
+  --surface-strong: rgba(249, 245, 241, 0.92);
+  --text: #2f2f2f;
   --muted: #6e625b;
   --line: rgba(120, 4, 53, 0.16);
   --accent: #780435;
@@ -26,7 +26,7 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
   background:
-    linear-gradient(180deg, rgba(243, 237, 228, 0.94), rgba(243, 237, 228, 0.7)),
+    linear-gradient(180deg, rgba(249, 245, 241, 0.96), rgba(249, 245, 241, 0.78)),
     radial-gradient(circle at top left, rgba(120, 4, 53, 0.09), transparent 34%),
     radial-gradient(circle at top right, rgba(184, 139, 96, 0.14), transparent 32%),
     var(--bg);
