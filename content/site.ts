@@ -11,6 +11,20 @@ export const siteConfig = {
     description:
       "嗨，我是 Cherry。一名在台南接案的攝影師，十年來以溫暖而真實的影像，記錄人與人之間值得珍藏的故事。",
     image: "/cherry/photos/hero/hero-01.jpg",
+    slides: [
+      {
+        src: "/cherry/photos/featured/04.jpg",
+        alt: "柔光女性人像作品"
+      },
+      {
+        src: "/cherry/photos/featured/01.jpg",
+        alt: "白色造型人像作品"
+      },
+      {
+        src: "/cherry/photos/featured/03.jpg",
+        alt: "黑白寵物人像作品"
+      }
+    ],
     cta: "探索作品集"
   },
   categories: [

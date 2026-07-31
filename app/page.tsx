@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import HeroCarousel from "./components/HeroCarousel";
 import MarqueeGallery from "./components/MarqueeGallery";
 import SocialFooter from "./components/SocialFooter";
 import TintedImage from "./components/TintedImage";
@@ -22,15 +23,7 @@ export default function Home() {
 
         <div className="hero-visual">
           <div className="hero-image-frame">
-            <TintedImage
-              src={siteConfig.hero.image}
-              alt="Cherry WoO Photography 主視覺"
-              fill
-              priority
-              sizes="(max-width: 1100px) 100vw, 58vw"
-              frameClassName="hero-tint"
-              imageClassName="hero-image"
-            />
+            <HeroCarousel slides={siteConfig.hero.slides} />
           </div>
         </div>
       </section>

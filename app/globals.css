@@ -274,6 +274,72 @@ h1 {
   opacity: 0;
 }
 
+/* ── Hero Carousel ── */
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--accent);
+}
+
+.hero-carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 900ms ease, transform 3600ms ease;
+}
+
+.hero-carousel__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.hero-carousel__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(47, 47, 47, 0.02), rgba(47, 47, 47, 0.14)),
+    linear-gradient(90deg, rgba(120, 4, 53, 0.14), transparent 42%);
+}
+
+.hero-carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.hero-carousel__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid rgba(249, 245, 241, 0.82);
+  border-radius: 999px;
+  background: rgba(249, 245, 241, 0.32);
+  cursor: pointer;
+  transition: width 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.hero-carousel__dot.is-active {
+  width: 28px;
+  background: #f9f5f1;
+  border-color: #f9f5f1;
+}
+
 /* ── Tinted Image ── */
 
 .tinted-image {
