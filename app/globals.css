@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 :root {
   --bg: #f9f5f1;
@@ -221,9 +221,9 @@ h1 {
   max-width: 36rem;
   margin-bottom: 24px;
   color: var(--accent);
-  font-family: "Fasthand", "Segoe Script", "Brush Script MT", cursive;
-  font-size: 40px;
-  line-height: 1.65;
+  font-family: "Caveat", "Segoe Script", "Brush Script MT", cursive;
+  font-size: 50px;
+  line-height: 1.15;
 }
 
 .hero-text {
