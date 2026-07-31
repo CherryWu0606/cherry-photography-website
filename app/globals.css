@@ -190,7 +190,6 @@ h3 {
 /* ── Hero ── */
 
 .hero {
-  min-height: 680px;
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 24px;
@@ -202,7 +201,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 20px 40px 0;
+  padding: 0 20px 0 0;
 }
 
 .hero-script {
@@ -249,7 +248,7 @@ h1 {
 .hero-image-frame {
   position: relative;
   height: 100%;
-  min-height: 620px;
+  min-height: 0;
   overflow: hidden;
   border-radius: 2px;
   background: linear-gradient(145deg, #efe4d8, var(--taupe));
