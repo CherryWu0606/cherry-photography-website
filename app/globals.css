@@ -217,11 +217,10 @@ h1 {
 }
 
 .hero-title-en {
-  max-width: 36rem;
   margin-bottom: 24px;
   color: var(--text);
   font-family: "Caveat", "Segoe Script", "Brush Script MT", cursive;
-  font-size: 50px;
+  font-size: clamp(2rem, 3.72vw, 3.1rem);
   font-weight: 700;
   line-height: 1.15;
   text-align: left;
