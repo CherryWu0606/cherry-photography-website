@@ -847,6 +847,14 @@ h1 {
     border-bottom: 1px solid var(--line);
   }
 
+  .topbar.is-scrolled .nav.is-open a {
+    color: var(--text);
+  }
+
+  .topbar.is-scrolled .nav.is-open a:hover {
+    color: var(--accent);
+  }
+
   .nav a:last-child {
     border-bottom: none;
   }
