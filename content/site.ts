@@ -13,16 +13,48 @@ export const siteConfig = {
     image: "/cherry/photos/hero/hero-01.jpg",
     slides: [
       {
-        src: "/cherry/photos/featured/04.jpg",
-        alt: "柔光女性人像作品"
+        src: "/cherry/photos/hero/front/front-01.jpeg",
+        alt: "戶外婚紗與幸福笑容"
       },
       {
-        src: "/cherry/photos/featured/01.jpg",
-        alt: "白色造型人像作品"
+        src: "/cherry/photos/hero/front/front-02.jpeg",
+        alt: "室內婚紗與窗光"
       },
       {
-        src: "/cherry/photos/featured/03.jpg",
-        alt: "黑白寵物人像作品"
+        src: "/cherry/photos/hero/front/front-03.jpeg",
+        alt: "情侶手勢特寫"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-04.jpeg",
+        alt: "暖色調女性寫真"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-05.jpeg",
+        alt: "新中式旗袍人像"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-06.jpeg",
+        alt: "華麗和服棚拍人像"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-07.jpeg",
+        alt: "森林天使造型寫真"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-08.jpeg",
+        alt: "陽光側臉人像"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-09.jpeg",
+        alt: "窗邊黑白情緒人像"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-10.jpeg",
+        alt: "海邊夕陽剪影"
+      },
+      {
+        src: "/cherry/photos/hero/front/front-11.jpeg",
+        alt: "婚禮禮車紀實"
       }
     ],
     cta: "探索作品集"

@@ -40,7 +40,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             alt={slide.alt}
             fill
             priority={index === 0}
-            sizes="(max-width: 1100px) 100vw, 58vw"
+            sizes="100vw"
             className="hero-carousel__image"
           />
         </div>

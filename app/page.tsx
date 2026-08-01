@@ -16,15 +16,15 @@ export default function Home() {
       <Header />
 
       <section className="hero" id="home">
-        <div className="hero-copy">
-          <h1>{siteConfig.hero.title}</h1>
-          <p className="hero-title-en">{siteConfig.hero.titleEn}</p>
-        </div>
-
         <div className="hero-visual">
           <div className="hero-image-frame">
             <HeroCarousel slides={siteConfig.hero.slides} />
           </div>
+        </div>
+
+        <div className="hero-copy">
+          <h1>{siteConfig.hero.title}</h1>
+          <p className="hero-title-en">{siteConfig.hero.titleEn}</p>
         </div>
       </section>
 
