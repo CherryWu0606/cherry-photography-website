@@ -642,6 +642,10 @@ h1 {
     var(--surface-strong);
 }
 
+#services .footer-section {
+  margin-top: 0;
+}
+
 .footer-intro .script {
   font-size: 1.5rem;
   color: var(--accent);

@@ -101,15 +101,15 @@ export const siteConfig = {
     copyright: "© 2026 Cherry WoO Photography. All Rights Reserved."
   },
   contact: {
-    eyebrow: "聯絡我",
-    title: "一起留下值得回看的瞬間",
+    eyebrow: "預約服務",
+    title: "Booking Service",
     description: "歡迎透過 Instagram 私訊拍攝需求，或追蹤我的社群帳號，看見最新的影像故事。"
   },
   nav: [
     { label: "關於我", href: "#about" },
     { label: "攝影作品", href: "#portfolio" },
     { label: "服務項目", href: "#services" },
-    { label: "聯絡我預約服務", href: "#contact" }
+    { label: "預約服務", href: "#contact" }
   ]
 } as const;
 

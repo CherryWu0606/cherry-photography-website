@@ -28,29 +28,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section cards" id="portfolio">
-        {siteConfig.categories.map((category) => (
-          <article className={`category-card category-card--${category.slug}`} key={category.title}>
-            <div className="category-image">
-              <TintedImage
-                src={category.image}
-                alt={category.title}
-                fill
-                sizes="(max-width: 1100px) 50vw, 25vw"
-                imageClassName="category-photo"
-              />
-              <span className="category-image__label">{category.title}</span>
-            </div>
-            <div className="category-copy">
-              <h2>{category.title}</h2>
-              <p className="category-subtitle">{category.subtitle}</p>
-              <p className="category-description">{category.description}</p>
-              <a className="category-link" href="#portfolio">
-                View more →
-              </a>
-            </div>
-          </article>
-        ))}
+      <section className="section" id="portfolio">
+        <div className="section-head">
+          <div>
+            <p className="eyebrow">攝影作品</p>
+            <h2>Photography Works</h2>
+          </div>
+        </div>
+
+        <div className="cards">
+          {siteConfig.categories.map((category) => (
+            <article className={`category-card category-card--${category.slug}`} key={category.title}>
+              <div className="category-image">
+                <TintedImage
+                  src={category.image}
+                  alt={category.title}
+                  fill
+                  sizes="(max-width: 1100px) 50vw, 25vw"
+                  imageClassName="category-photo"
+                />
+                <span className="category-image__label">{category.title}</span>
+              </div>
+              <div className="category-copy">
+                <h2>{category.title}</h2>
+                <p className="category-subtitle">{category.subtitle}</p>
+                <p className="category-description">{category.description}</p>
+                <a className="category-link" href="#portfolio">
+                  View more →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section featured">
@@ -95,12 +104,21 @@ export default function Home() {
         </aside>
       </section>
 
-      <section className="footer-section" id="services">
-        <div className="footer-intro">
-          <p className="script">{siteConfig.footer.script}</p>
-          <p>{siteConfig.footer.text}</p>
+      <section className="section" id="services">
+        <div className="section-head">
+          <div>
+            <p className="eyebrow">服務項目</p>
+            <h2>Services</h2>
+          </div>
         </div>
-        <SocialFooter />
+
+        <div className="footer-section">
+          <div className="footer-intro">
+            <p className="script">{siteConfig.footer.script}</p>
+            <p>{siteConfig.footer.text}</p>
+          </div>
+          <SocialFooter />
+        </div>
       </section>
 
       <section className="section contact" id="contact">
