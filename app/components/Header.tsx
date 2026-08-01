@@ -47,7 +47,8 @@ export default function Header() {
       <nav id="site-nav" className={`nav ${open ? "is-open" : ""}`}>
         {siteConfig.nav.map((item) => (
           <a href={item.href} key={item.label} onClick={() => setOpen(false)}>
-            {item.label}
+            <span className="nav__label">{item.label}</span>
+            <span className="nav__subtitle">{item.subtitle}</span>
           </a>
         ))}
       </nav>
