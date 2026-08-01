@@ -116,23 +116,25 @@ h3 {
   display: none;
   align-items: center;
   gap: 8px;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
   color: var(--text);
   cursor: pointer;
+  font: inherit;
 }
 
 .menu-toggle__bar {
   display: block;
   width: 18px;
   height: 2px;
-  background: var(--text);
-  box-shadow: 0 6px 0 var(--text), 0 -6px 0 var(--text);
+  background: currentColor;
+  box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
 }
 
 .menu-toggle__label {
   font-size: 0.85rem;
+  opacity: 1;
 }
 
 .nav {
