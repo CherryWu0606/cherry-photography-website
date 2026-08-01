@@ -106,11 +106,10 @@ export const siteConfig = {
     description: "歡迎透過 Instagram 私訊拍攝需求，或追蹤我的社群帳號，看見最新的影像故事。"
   },
   nav: [
-    { label: "首頁", href: "#home" },
-    { label: "作品集", href: "#portfolio" },
     { label: "關於我", href: "#about" },
-    { label: "拍攝服務", href: "#services" },
-    { label: "聯絡我", href: "#contact" }
+    { label: "攝影作品", href: "#portfolio" },
+    { label: "服務項目", href: "#services" },
+    { label: "聯絡我預約服務", href: "#contact" }
   ]
 } as const;
 
