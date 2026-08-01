@@ -40,7 +40,6 @@ export default function Header() {
         onClick={() => setOpen((prev) => !prev)}
       >
         <span className="menu-toggle__bar" />
-        <span className="menu-toggle__bar" />
         <span className="menu-toggle__label">{open ? "關閉" : "選單"}</span>
       </button>
 
